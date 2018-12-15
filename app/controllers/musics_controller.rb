@@ -1,5 +1,5 @@
 class MusicsController < ApplicationController
   def index
-    @music = Music.all
+    @musics = Music.search(params[:search])
   end
 end
