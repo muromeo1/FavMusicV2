@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Dados salvos com sucesso!"
       redirect_to users_path
     else
-      flash[:error] = "Algo deu errado..."
+      flash[:danger] = "Algo deu errado..."
       redirect_to new_user_path
     end
   end
