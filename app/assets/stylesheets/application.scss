@@ -1,1 +1,9 @@
 @import "bootstrap";
+@import "components/register";
+@import url('https://fonts.googleapis.com/css?family=Abel|Pacifico');
+
+body{
+  background: rgb(230, 230, 230);
+  margin-top: 40px;
+  font-family: 'Abel', sans-serif;
+}

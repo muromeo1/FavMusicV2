@@ -1,0 +1,12 @@
+.white-container{
+  background: white;
+  padding: 30px;
+  width: 420px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+}
+
+.pacific-font{
+  font-family: 'Pacifico', cursive;
+  color: #1ca2b8;
+}
