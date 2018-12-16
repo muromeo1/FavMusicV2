@@ -20,7 +20,7 @@ Com o repositório já clonado, execute para instalar as gems:
 bundle install
 ```
 
-Edite o arquivo "database.yml" com o nome de usuário e senha do seu PostgreSQL:
+Edite o arquivo "config/database.yml" com o nome de usuário e senha do seu PostgreSQL:
 
 ```
 default: &default
@@ -29,7 +29,7 @@ default: &default
   ...
 ```
 
-No terminal, crie a database rodando:
+Dentro do diretório do programa, crie a database rodando no terminal:
 
 ```
 rails db:create
