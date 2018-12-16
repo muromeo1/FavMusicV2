@@ -5,5 +5,6 @@ class User < ApplicationRecord
                     format: { with: URI::MailTo::EMAIL_REGEXP }
 
   has_many :favorites
+  has_many :musics, through: :favorites
 
 end
