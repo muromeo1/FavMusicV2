@@ -9,9 +9,8 @@ class UsersController < ApplicationController
 
     if @user.save
       redirect_to musics_path
-      flash[:notice] = "Dados salvos com sucesso!"
     else
-      flash[:danger] = "Algo deu errado..."
+        flash[:danger] = "#{@user.errors.full_messages}"
       redirect_to new_user_path
     end
   end

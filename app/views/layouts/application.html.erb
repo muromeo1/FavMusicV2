@@ -9,8 +9,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-
     <%= render partial: "layouts/navbar" unless @register%>
+    <% if @register %>
+
+    <% else %>
+      <%= render partial: "layouts/alert_main"%>
+    <% end %>
+    
     <%= yield %>
+
   </body>
 </html>

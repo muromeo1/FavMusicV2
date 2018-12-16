@@ -7,16 +7,22 @@ class FavoritesController < ApplicationController
 
   def new
     @favorite = Favorite.new
+
     @music = Music.find(params[:music_id])
 
     # @user simula um current_user usado com devise ou outro tipo de autenticação
     @user = User.last
+
+    if @user.favorites.check(@music.id).exists?
+      flash[:danger] = "'#{@music.title}' já favoritada"
+      redirect_to musics_path
+    end
   end
 
   def create
     @favorite = Favorite.create(music_params)
     if @favorite.save
-      flash[:notice] = "Música salva em favoritos!"
+      flash[:success] = "Música salva em favoritos!"
       redirect_to musics_path
     else
       flash[:danger] = "Algo deu errado..."
