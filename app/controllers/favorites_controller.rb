@@ -1,4 +1,10 @@
 class FavoritesController < ApplicationController
+
+  def index
+    @user = User.last
+    @favorites = Favorite.get_music(@user)
+  end
+
   def new
     @favorite = Favorite.new
     @music = Music.find(params[:music_id])
@@ -22,6 +28,6 @@ class FavoritesController < ApplicationController
 
   private
   def music_params
-    params.require(:favorite).permit(:music_id, :user_id)
+    params.require(:favorite).permit(:music_id, :user_id, :title, :artist, :genre)
   end
 end
