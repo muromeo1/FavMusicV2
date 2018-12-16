@@ -15,6 +15,7 @@
         <th scope="col">Título</th>
         <th scope="col">Artista</th>
         <th scope="col">Gênero</th>
+        <th scope="col">Favorito</th>
       </tr>
     </thead>
     <tbody>
@@ -23,9 +24,14 @@
         <td><%= f.title%></td>
         <td><%= f.artist %></td>
         <td><%= f.genre %></td>
+        <td><%= link_to "Deletar", favorite_path(f.id), method: :delete ,class: "btn btn-danger" %></td>
       </tr>
       <% end %>
     </tbody>
   </table>
-
+  <div class="row mt-3">
+    <div class="col-4 offset-4">
+      <%= link_to "Voltar", musics_path, class: "btn btn-light mt-5 btn-block", style: "background: rgb(232, 232, 232);"%>
+    </div>
+  </div>
 </div>

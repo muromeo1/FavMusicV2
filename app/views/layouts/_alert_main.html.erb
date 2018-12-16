@@ -1,0 +1,5 @@
+<div class="container alert-favs" >
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>" style="margin-top: 0px; margin-bottom: -50px;"><%= value %></div>
+<% end %>
+</div>

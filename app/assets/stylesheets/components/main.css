@@ -6,3 +6,9 @@
   border-radius: 5px;
   box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
 }
+
+.alert-favs{
+  margin-top: 70px;
+  z-index: 1px;
+  text-align: center;
+}

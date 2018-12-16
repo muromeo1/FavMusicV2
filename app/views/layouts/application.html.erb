@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Favmusic</title>
+    <title>FavMusic!</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-
     <%= render partial: "layouts/navbar" unless @register%>
+    <% if @register %>
+      <%= render partial: "layouts/alert_login" %>
+    <% else %>
+      <%= render partial: "layouts/alert_main"%>
+    <% end %>
+
     <%= yield %>
+
   </body>
 </html>

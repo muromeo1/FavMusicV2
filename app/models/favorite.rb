@@ -6,4 +6,7 @@ class Favorite < ApplicationRecord
     where('user_id = ?', "#{user.id}")
   end
 
+  def self.check(music)
+    where('music_id = ?', "#{music}")
+  end
 end
