@@ -1,0 +1,43 @@
+<div class="container text-center white-main-container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="pacific-font">FavMusic!</h1>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12">
+      <h5>Procure uma música para favoritar</h5>
+    </div>
+  </div>
+  <%= form_tag musics_path, :method => 'get' do %>
+
+  <div class="row mt-3">
+    <div class="col-6 offset-3">
+      <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Digite o nome de uma música ou o gênero musical..."%>
+    </div>
+    <%= submit_tag "Search", :name => nil, class: 'btn btn-info btn-block', type: "hidden" %>
+  </div>
+  <% end %>
+
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Artista</th>
+        <th scope="col">Gênero</th>
+        <th scope="col">Favorito</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @musics.each do |m| %>
+      <tr>
+        <td><%= m.title %></td>
+        <td><%= m.artist %></td>
+        <td><%= m.genre %></td>
+        <td><%= button_to "Favoritar", favorites_path(@musics),class: "btn btn-primary" %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
