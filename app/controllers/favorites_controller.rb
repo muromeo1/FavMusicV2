@@ -32,6 +32,17 @@ class FavoritesController < ApplicationController
 
   end
 
+  def destroy
+    @delete_fav = Favorite.find(params[:id]).destroy
+
+    if @delete_fav.destroy
+      flash[:warning] = "Música retirada dos seus favoritos."
+    else
+      flash[:danger] = "Não foi possível remover dos favoritos..."
+    end
+    redirect_to favorites_path
+  end
+
   private
   def music_params
     params.require(:favorite).permit(:music_id, :user_id, :title, :artist, :genre)
