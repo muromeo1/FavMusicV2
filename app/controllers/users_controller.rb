@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
+    @register = true
   end
 
   def create
     @user = User.create(users_params)
 
     if @user.save
-      redirect_to new_favorite_path
+      redirect_to musics_path
       flash[:notice] = "Dados salvos com sucesso!"
     else
       flash[:danger] = "Algo deu errado..."
