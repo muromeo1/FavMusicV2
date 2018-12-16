@@ -69,6 +69,6 @@ Para essa aplicação, foi utilizado o Teste Unitário. Com as análises de erro
 * [Bootstrap](https://getbootstrap.com/) - Framework de estilo responsívo
 
 
-## Authors
+## Autor
 
 * **Murilo Hernandes Romeo** - [muromeo1](https://github.com/muromeo1)
