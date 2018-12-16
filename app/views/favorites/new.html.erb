@@ -1,8 +1,12 @@
 <%= form_for @favorite do |f| %>
-<%= f.text_field :user_id, value: "#{@user.id}", type: "hidden"%>
-<%= f.text_field :music_id, value: "#{@music.id}", type: "hidden"%>
+<%= f.hidden_field :user_id, value: "#{@user.id}"%>
+<%= f.hidden_field :music_id, value: "#{@music.id}"%>
+<%= f.hidden_field :title, value: "#{@music.title}"%>
+<%= f.hidden_field :artist, value: "#{@music.artist}"%>
+<%= f.hidden_field :genre, value: "#{@music.genre}"%>
 
-<div class="container white-container text-center">
+
+<div class="container white-container text-center" style="margin-top: 70px;">
   <div class="row">
     <div class="col-12">
       <h1 class="pacific-font">FavMusic!</h1>

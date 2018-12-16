@@ -1,0 +1,31 @@
+<div class="container text-center white-main-container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="pacific-font">FavMusic!</h1>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-12">
+      <h5>Suas músicas favoritas, <%= @user.name %>:</h5>
+    </div>
+  </div>
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Artista</th>
+        <th scope="col">Gênero</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @favorites.each do |f| %>
+      <tr>
+        <td><%= f.title%></td>
+        <td><%= f.artist %></td>
+        <td><%= f.genre %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
