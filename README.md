@@ -1,24 +1,74 @@
-# README
+# FavMusic!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Um produto onde o usuário poderá favoritar suas músicas preferidas.
 
-Things you may want to cover:
+### Pré-requisitos
 
-* Ruby version
+Ter instalado:
 
-* System dependencies
+```
+Ruby -v2.5.3
+Rails -v5.2.2
+PostgreSQL -v10.6
+```
 
-* Configuration
+### Instalação
 
-* Database creation
+Com o repositório já clonado, execute para instalar as gems:
 
-* Database initialization
+```
+bundle install
+  
+```
 
-* How to run the test suite
+Edite o arquivo "database.yml" com o nome de usuário e senha do seu PostgreSQL:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+default: &default
+  username: seu_user
+  password: sua_senha
+  ...
+  
+```
 
-* Deployment instructions
+No terminal, crie a database rodando:
 
-* ...
+```
+rails db:create
+```
+
+Depois, realize as migrations do banco:
+
+```
+rails db:migrate
+```
+
+Adicione as músicas pré-escolhidas com:
+
+```
+rails db:seed
+```
+
+Feito isso, apenas execute:
+
+```
+rails s
+```
+
+Acesse "localhost:3000" para vizualizar o sistema.
+
+## Testes
+
+Para essa aplicação, foi utilizado o Teste Unitário. Com as análises de erros encontrados, os mesmos foram corrigidos e validados através das "Models".
+
+## Feito com
+
+* [Ruby](https://www.ruby-lang.org/pt/) - Linguagem de progrmação
+* [Rails](https://rubyonrails.org/) - Framework para aplicações WEB
+* [PostgeSQL](https://www.postgresql.org/) - Banco relacional usado nessa aplicação
+* [Bootstrap](https://getbootstrap.com/) - Framework de estilo responsívo
+
+
+## Authors
+
+* **Murilo Hernandes Romeo** - [muromeo1](https://github.com/muromeo1)
