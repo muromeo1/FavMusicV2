@@ -20,11 +20,11 @@ Com o repositório já clonado, execute para instalar as gems:
 bundle install
 ```
 
-Edite o arquivo "config/database.yml" com o nome de usuário e senha do seu PostgreSQL. Adicione também o domínio. 
+Edite o arquivo "config/database.yml" com o nome de usuário e senha do seu PostgreSQL. Adicione também o host:
 
 ```
 default: &default
-  host: seu_host (Ex.: localhost)
+  host: localhost
   username: seu_user
   password: sua_senha
   ...
